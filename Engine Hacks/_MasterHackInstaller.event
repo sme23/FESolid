@@ -181,6 +181,12 @@ POP
   
   //Item Effect Revamp by Teraspark
   #include "Necessary/ItemEffectRevamp/IERevamp_Installer.event"
+  
+  
+  //LBT
+  #include "SolidHacks/LazberianTurnFlow/LazberianTurnFlow.event"
+  
+  
 
   ALIGN 4
   #include "SkillSystem/SkillSystemInstaller.event"
