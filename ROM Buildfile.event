@@ -23,6 +23,8 @@
     MESSAGE Used hax space ends at currentOffset
 
     //Events
+	#include "Events/_MasterEventsInstaller.event"
+	MESSAGE Used event space ends at currentOffset
 
     //Maps
     
