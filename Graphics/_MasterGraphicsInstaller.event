@@ -1,0 +1,9 @@
+//Title Screen
+#include "TitleScreen/titlebackgroundinstaller.event"
+
+//Mugs
+#include "Mugs/_MasterMugInstaller.event"
+
+//Misc Graphics
+#include "Misc/_MiscGraphicsInstaller.event"
+
