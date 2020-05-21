@@ -53,7 +53,7 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
-SetBackground($35)
+SetBackground($32)
 Text(ScreenPositionTest)
 EndConvo
 NoFade

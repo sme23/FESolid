@@ -52,7 +52,10 @@ echo:
 echo Assembling
 
 cd "%base_dir%Event Assembler"
-ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%"
+ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%" --build-times --nocash-sym
+
+cd "%~dp0Tools/sym"
+java -jar %~dp0sym\SymCombo.jar "%~dp0FireEmblem3Universes.sym" "%~dp0FE8_clean.sym"
 
 if /I not [%1]==[quick] (
 

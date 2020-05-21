@@ -1,0 +1,16 @@
+PUSH
+	ORG $95DF74
+		POIN BG1_img BG1_tsa BG1_pal //replaces bg $32
+POP
+
+ALIGN 4
+BG1_img:
+#incbin "BG1_img.dmp"
+
+ALIGN 4
+BG1_tsa:
+#incbin "BG1_tsa.dmp"
+
+ALIGN 4
+BG1_pal:
+#incbin "BG1_pal.dmp"
