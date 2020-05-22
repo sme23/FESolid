@@ -12,6 +12,8 @@
 #define ChapterTileset(chapter, object, palette, config) "PUSH; ORG 0x8b0890 + (148* chapter) + 4; SHORT object; BYTE palette config; POP"
 #define ChapterTileAnims(chapter, anim1, anim2) "PUSH; ORG 0x8b0890 + (148* chapter) + 9; BYTE anim1 anim2; POP"
 
+#define ChapterDataTable 0x8b0890
+
 #ifndef ItemTable
   #define ItemTable 0x809B10
 #endif

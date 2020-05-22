@@ -185,7 +185,14 @@ POP
   
   //LBT
   #include "SolidHacks/LazberianTurnFlow/LazberianTurnFlow.event"
-  
+  //CVT
+  #include "SolidHacks/ChangingVictoryBGM/ChangingVictoryBGM.event"
+  //CBT
+  #include "SolidHacks/ContinueBattleBGM/Installer.event"
+  //LAT
+  #include "SolidHacks/LessAnnoyingFog/Less Annoying Fog Installer.event"
+  //CHT
+  #include "SolidHacks/NewCHAI/New CHAI.event"
   
 
   ALIGN 4

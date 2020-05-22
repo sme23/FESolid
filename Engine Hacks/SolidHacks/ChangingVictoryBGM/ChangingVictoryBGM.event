@@ -1,0 +1,27 @@
+//Set Victory BGM By Chapter by 7743
+
+#define jumpToHack_r1(offset) "BYTE 0x00 0x4B 0x18 0x47; POIN (offset|0x1)"
+
+PUSH
+	ORG 0x20FAC
+		#incbin "kill_chapter_prologue_bgm.bin"
+	ORG 0x20CF0
+		#incbin "kill_chapter_prologue_bgm2.bin"
+	ORG 0x20D84
+		#incbin "kill_chapter_prologue_bgm2.bin"
+	ORG 0x20D94 
+		#incbin "kill_chapter_prologue_bgm3.bin"
+	ORG 0x20D00 
+		#incbin "kill_chapter_prologue_bgm3.bin"
+	ORG 0x160C4
+		jumpToHack_r1(music10change)
+POP
+
+music10change:
+#incbin "music10change.bin"
+
+
+PUSH
+	ORG (ChapterDataTable + 0x28)
+	BYTE 10
+POP
