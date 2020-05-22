@@ -2,6 +2,8 @@
     #include "EAstdlib.event"
     #include "Custom Definitions.event"
 
+	#inctext DateTimeSetter
+	
     ORG FreeSpace
 
     #include "repointedTextTable.event"
@@ -35,6 +37,8 @@
 	MESSAGE Used event space ends at currentOffset
 	
     MESSAGE Used free space ends at currentOffset
+	
+	
 #else
     ERROR You are not assembling FE8 events!
 #endif
