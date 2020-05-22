@@ -114,6 +114,32 @@ Snake[X]
 ## SnakeDesc
 Snake[X]
 
+## SuspendText1
+[OpenMidLeft]
+Be careful, Snake.[A][N]
+Would you like to save your mission?[A][N]
+[Yes][X]
+
+## SuspendText2
+What can I do for you, Snake?[A][N]
+Would you like to save your mission?[A][N]
+[Yes][X]
+
+## SuspendText3
+What is it, Snake?[A][N]
+Would you like to save your mission?[A][N]
+[Yes][X]
+
+## SuspendText4
+You called, Snake?[A][N]
+Would you like to save your mission?[A][N]
+[Yes][X]
+
+## SuspendText5
+What's up, Snake?[A][N]
+Would you like to save your mission?[A][N]
+[Yes][X]
+
 #include "skilldesc_text.txt"
 
 #include "unitinfo_text.txt"

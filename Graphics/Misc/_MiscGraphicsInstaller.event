@@ -1,6 +1,7 @@
 PUSH
 	ORG $95DF74
-		POIN BG1_img BG1_tsa BG1_pal //replaces bg $32
+		POIN BG1_img BG1_tsa BG1_pal //replaces bg $32 with colonel
+		POIN BG2_img BG2_tsa BG2_pal //replaces bg $33 with mei ling
 POP
 
 ALIGN 4
@@ -14,3 +15,15 @@ BG1_tsa:
 ALIGN 4
 BG1_pal:
 #incbin "BG1_pal.dmp"
+
+ALIGN 4
+BG2_img:
+#incbin "BG2_img.dmp"
+
+ALIGN 4
+BG2_tsa:
+#incbin "BG2_tsa.dmp"
+
+ALIGN 4
+BG2_pal:
+#incbin "BG2_pal.dmp"
