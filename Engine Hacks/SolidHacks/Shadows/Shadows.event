@@ -1,0 +1,11 @@
+//using top bit of byte +6 of external data
+//if set, gain Shade+ effect; can't be seen by enemies at all
+//ASMC for checking state of this flag given a unit's char ID
+
+#include "Shadows.lyn.event"
+
+#define DisableShadowsFlag 0xB1
+
+#define CheckIfShaded(charID) "SVAL 1 charID; ASMC CheckShadowBitASMC"
+#define ToggleShaded(charID) "SVAL 1 charID; ASMC ToggleShadowBitASMC"
+
