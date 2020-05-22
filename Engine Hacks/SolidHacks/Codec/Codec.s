@@ -8,7 +8,8 @@
 .global CodecEffect
 .type CodecEffect, %function
 
-
+.global CodecCampbellEffect
+.type CodecCampbellEffect, %function
 
 
 CodecUsability:
@@ -17,7 +18,6 @@ bx r14
 
 .ltorg
 .align
-
 
 
 .equ StartMenuAdjusted,0x804EB98
@@ -40,3 +40,20 @@ bx r1
 .align
 
 
+
+
+CodecCampbellEffect:
+push {r14}
+
+ldr r0,=#0x800D07C
+mov r14,r0
+ldr r0,=CampbellEvent
+mov r1,#1
+.short 0xF800
+
+mov r0,#0x94		@play beep sound & end menu on next frame & clear menu graphics
+pop {r1}
+bx r1
+
+.ltorg
+.align

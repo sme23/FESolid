@@ -116,29 +116,65 @@ Snake[X]
 
 ## SuspendText1
 [OpenMidLeft]
-Be careful, Snake.[A][N]
+Be careful, Snake.[A][2NL]
 Would you like to save your mission?[A][N]
 [Yes][X]
 
 ## SuspendText2
-What can I do for you, Snake?[A][N]
+[OpenMidLeft]
+What can I do for you, Snake?[A][2NL]
 Would you like to save your mission?[A][N]
 [Yes][X]
 
 ## SuspendText3
-What is it, Snake?[A][N]
+[OpenMidLeft]
+What is it, Snake?[A][2NL]
 Would you like to save your mission?[A][N]
 [Yes][X]
 
 ## SuspendText4
-You called, Snake?[A][N]
+[OpenMidLeft]
+You called, Snake?[A][2NL]
 Would you like to save your mission?[A][N]
 [Yes][X]
 
 ## SuspendText5
-What's up, Snake?[A][N]
+[OpenMidLeft]
+What's up, Snake?[A][2NL]
 Would you like to save your mission?[A][N]
 [Yes][X]
+
+## SuspendTextEnd
+[OpenMidLeft]
+Next time, choose Resume[N]
+Chapter to finish this mission.[A][X]
+
+## SuspendTextEnd2
+[OpenMidLeft]
+C'mon, Snake.[A][N]
+Don't call me for no reason.[A][X]
+
+## UM_Campbell
+ Campbell[X]
+ 
+## UM_CampbellDesc
+Call Colonel Campbell[N]
+and get some advice.[X]
+
+## UM_MeiLing
+ Mei Ling[X]
+
+## UM_MeiLingDesc
+Call Mei Ling and[N]
+save your mission.[X]
+
+## UM_Codec
+ Codec[X]
+ 
+## UM_CodecDesc
+Call someone[N]
+using your codec.[X]
+
 
 #include "skilldesc_text.txt"
 

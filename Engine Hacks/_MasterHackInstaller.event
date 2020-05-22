@@ -194,6 +194,9 @@ POP
   //CHT
   #include "SolidHacks/NewCHAI/New CHAI.event"
   
+  //Codec
+  #include "SolidHacks/Codec/Codec.event"
+  
 
   ALIGN 4
   #include "SkillSystem/SkillSystemInstaller.event"
