@@ -10,8 +10,8 @@ set "source_rom=%~dp0FE8_clean.gba"
 
 set "main_event=%~dp0ROM Buildfile.event"
 
-set "target_rom=%~dp0SkillsTest.gba"
-set "target_ups=%~dp0SkillsTest.ups"
+set "target_rom=%~dp0Solid.gba"
+set "target_ups=%~dp0Solid.ups"
 
 @rem defining tools
 
@@ -55,7 +55,7 @@ cd "%base_dir%Event Assembler"
 ColorzCore A FE8 "-output:%target_rom%" "-input:%main_event%" --build-times --nocash-sym
 
 cd "%~dp0Tools/sym"
-java -jar %~dp0sym\SymCombo.jar "%~dp0FireEmblem3Universes.sym" "%~dp0FE8_clean.sym"
+java -jar %~dp0Tools\sym\SymCombo.jar "%~dp0Solid.sym" "%~dp0FE8_clean.sym"
 
 if /I not [%1]==[quick] (
 

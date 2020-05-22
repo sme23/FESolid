@@ -1,0 +1,9 @@
+
+SongTable(ThemeOfTaraID,Tara,MapMusicGroup)
+#include "Songs/Tara.event"
+
+SongTable(EncounterID,encounter,MapMusicGroup)
+#include "Songs/encounter.event"
+
+SongTable(OutsideID,outside,MapMusicGroup)
+#include "Songs/outside.event"

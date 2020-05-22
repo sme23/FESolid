@@ -38,3 +38,14 @@
 #include "Engine Hacks/SkillSystem/skill_definitions.event"
 
  #define __DEBUG__ // Uncomment to get the Debug startup menu :p
+
+
+
+// hack defs
+
+
+#define Snake Eirika
+#define SnakeMug 2
+
+
+

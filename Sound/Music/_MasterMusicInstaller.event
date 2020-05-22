@@ -1,0 +1,7 @@
+
+voicegroup000:
+#incbin "bin/FE8_NI_Map.bin"
+
+#include "drumfix_fe8.event"
+#include "_SongDefinitions.event"
+#include "_SongInstaller.event"

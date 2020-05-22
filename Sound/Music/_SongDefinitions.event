@@ -1,0 +1,12 @@
+
+#include "MPlayDef.event"
+
+#define BattleMusicGroup 0
+#define MapMusicGroup 1
+#define SFXGroup 6
+
+//Song IDs
+#define ThemeOfTaraID 9
+#define OutsideID 10
+#define EncounterID 11
+

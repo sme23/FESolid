@@ -38,6 +38,7 @@ Tutorial:
 END_MAIN
 
 Units1:
+UNIT Snake Thief 0 Level(5,Ally,0) [0,12] 0 0 1 REDA1R12 NoItems NoAI
 UNIT
 
 
@@ -56,6 +57,9 @@ BeginningScene:
 SetBackground($32)
 Text(ScreenPositionTest)
 EndConvo
+CAM1 [0,13]
+LOAD1 0 Units1
+ENUN
 NoFade
 ENDA
 
