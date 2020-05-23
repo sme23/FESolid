@@ -1,0 +1,50 @@
+
+    #include "MPlayDef.event"
+
+    #define    loop_sfx_grp_MenuSelect  MenuSelect_map
+    #define    loop_sfx_pri_MenuSelect  0
+    #define    loop_sfx_rev_MenuSelect  0
+    #define    loop_sfx_mvl_MenuSelect  127
+    #define    loop_sfx_key_MenuSelect  0
+    #define    loop_sfx_tbs_MenuSelect  1
+    #define    loop_sfx_exg_MenuSelect  0
+    #define    loop_sfx_cmp_MenuSelect  1
+
+    ALIGN 4
+
+loop_sfx_1:
+    BYTE        VOL     127*loop_sfx_mvl_MenuSelect/mxv
+    BYTE    KEYSH   loop_sfx_key_MenuSelect+0
+    BYTE        VOICE   0
+    BYTE        TIE     Cn3   v064
+    BYTE    W96
+loop_sfx_1_B1:
+    BYTE    W96
+    BYTE    W96
+    BYTE    GoTo
+     POIN2    loop_sfx_1_B1
+loop_sfx_1_B2:
+    BYTE    W06
+    BYTE        EOT     Cn3 
+    BYTE    FINE
+
+    ALIGN 4
+
+MenuSelect:
+    BYTE    1    // NumTrks
+    BYTE    0    // NumBlks
+    BYTE    loop_sfx_pri_MenuSelect    // Priority
+    BYTE    loop_sfx_rev_MenuSelect    // Reverb.
+
+    POIN2    loop_sfx_grp_MenuSelect
+
+    POIN2    loop_sfx_1
+
+    
+MenuSelect_map:
+WORD $3c00
+POIN MenuSelect_wav
+WORD $FF00FF
+
+MenuSelect_wav:
+#incbin "MenuSelect.bin"

@@ -1,0 +1,50 @@
+
+    #include "MPlayDef.event"
+
+    #define    loop_sfx_grp_SnakeDie  SnakeDie_map
+    #define    loop_sfx_pri_SnakeDie  0
+    #define    loop_sfx_rev_SnakeDie  0
+    #define    loop_sfx_mvl_SnakeDie  127
+    #define    loop_sfx_key_SnakeDie  0
+    #define    loop_sfx_tbs_SnakeDie  1
+    #define    loop_sfx_exg_SnakeDie  0
+    #define    loop_sfx_cmp_SnakeDie  1
+
+    ALIGN 4
+
+loop_sfx_1:
+    BYTE        VOL     127*loop_sfx_mvl_SnakeDie/mxv
+    BYTE    KEYSH   loop_sfx_key_SnakeDie+0
+    BYTE        VOICE   0
+    BYTE        TIE     Cn3   v064
+    BYTE    W96
+loop_sfx_1_B1:
+    BYTE    W96
+    BYTE    W96
+    BYTE    GoTo
+     POIN2    loop_sfx_1_B1
+loop_sfx_1_B2:
+    BYTE    W06
+    BYTE        EOT     Cn3 
+    BYTE    FINE
+
+    ALIGN 4
+
+SnakeDie:
+    BYTE    1    // NumTrks
+    BYTE    0    // NumBlks
+    BYTE    loop_sfx_pri_SnakeDie    // Priority
+    BYTE    loop_sfx_rev_SnakeDie    // Reverb.
+
+    POIN2    loop_sfx_grp_SnakeDie
+
+    POIN2    loop_sfx_1
+
+    
+SnakeDie_map:
+WORD $3c00
+POIN SnakeDie_wav
+WORD $FF00FF
+
+SnakeDie_wav:
+#incbin "SnakeDie.bin"

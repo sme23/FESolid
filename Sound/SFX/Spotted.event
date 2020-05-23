@@ -1,0 +1,50 @@
+
+    #include "MPlayDef.event"
+
+    #define    loop_sfx_grp_Spotted  Spotted_map
+    #define    loop_sfx_pri_Spotted  0
+    #define    loop_sfx_rev_Spotted  0
+    #define    loop_sfx_mvl_Spotted  127
+    #define    loop_sfx_key_Spotted  0
+    #define    loop_sfx_tbs_Spotted  1
+    #define    loop_sfx_exg_Spotted  0
+    #define    loop_sfx_cmp_Spotted  1
+
+    ALIGN 4
+
+loop_sfx_1:
+    BYTE        VOL     127*loop_sfx_mvl_Spotted/mxv
+    BYTE    KEYSH   loop_sfx_key_Spotted+0
+    BYTE        VOICE   0
+    BYTE        TIE     Cn3   v064
+    BYTE    W96
+loop_sfx_1_B1:
+    BYTE    W96
+    BYTE    W96
+    BYTE    GoTo
+     POIN2    loop_sfx_1_B1
+loop_sfx_1_B2:
+    BYTE    W06
+    BYTE        EOT     Cn3 
+    BYTE    FINE
+
+    ALIGN 4
+
+Spotted:
+    BYTE    1    // NumTrks
+    BYTE    0    // NumBlks
+    BYTE    loop_sfx_pri_Spotted    // Priority
+    BYTE    loop_sfx_rev_Spotted    // Reverb.
+
+    POIN2    loop_sfx_grp_Spotted
+
+    POIN2    loop_sfx_1
+
+    
+Spotted_map:
+WORD $3c00
+POIN Spotted_wav
+WORD $FF00FF
+
+Spotted_wav:
+#incbin "Spotted.bin"

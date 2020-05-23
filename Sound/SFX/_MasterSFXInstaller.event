@@ -1,0 +1,53 @@
+#define CodecCloseID 0x5E
+#define CodecDialID 0x5F
+#define CodecOpenID 0x62
+#define CodecRingID 0x63
+#define GameOverSoundID 0x5D
+#define MenuMoveID 0x66
+#define MenuOpenID 0x68
+#define MenuSelectID 0x6A
+#define SnakeDieID 0x58
+#define SpottedID 0x59
+
+{
+#include "CodecClose.event"
+SongTable(CodecCloseID,CodecClose,SFXGroup)
+}
+{
+#include "CodecDial.event"
+SongTable(CodecDialID,CodecDial,SFXGroup)
+}
+{
+#include "CodecOpen.event"
+SongTable(CodecOpenID,CodecOpen,SFXGroup)
+}
+{
+#include "CodecRing.event"
+SongTable(CodecRingID,CodecRing,SFXGroup)
+}
+{
+#include "GameOverSound.event"
+SongTable(GameOverSoundID,GameOverSound,SFXGroup)
+}
+{
+#include "MenuMove.event"
+SongTable(MenuMoveID,MenuMove,SFXGroup)
+}
+{
+#include "MenuOpen.event"
+SongTable(MenuOpenID,MenuOpen,SFXGroup)
+SongTable(0x6B,MenuOpen,SFXGroup)
+}
+{
+#include "MenuSelect.event"
+SongTable(0x6D,MenuSelect,SFXGroup)
+SongTable(MenuSelectID,MenuSelect,SFXGroup)
+}
+{
+#include "SnakeDie.event"
+SongTable(SnakeDieID,SnakeDie,SFXGroup)
+}
+{
+#include "Spotted.event"
+SongTable(SpottedID,Spotted,SFXGroup)
+}

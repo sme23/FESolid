@@ -1,0 +1,50 @@
+
+    #include "MPlayDef.event"
+
+    #define    loop_sfx_grp_CodecRing  CodecRing_map
+    #define    loop_sfx_pri_CodecRing  0
+    #define    loop_sfx_rev_CodecRing  0
+    #define    loop_sfx_mvl_CodecRing  127
+    #define    loop_sfx_key_CodecRing  0
+    #define    loop_sfx_tbs_CodecRing  1
+    #define    loop_sfx_exg_CodecRing  0
+    #define    loop_sfx_cmp_CodecRing  1
+
+    ALIGN 4
+
+loop_sfx_1:
+    BYTE        VOL     127*loop_sfx_mvl_CodecRing/mxv
+    BYTE    KEYSH   loop_sfx_key_CodecRing+0
+    BYTE        VOICE   0
+    BYTE        TIE     Cn3   v064
+    BYTE    W96
+loop_sfx_1_B1:
+    BYTE    W96
+    BYTE    W96
+    BYTE    GoTo
+     POIN2    loop_sfx_1_B1
+loop_sfx_1_B2:
+    BYTE    W06
+    BYTE        EOT     Cn3 
+    BYTE    FINE
+
+    ALIGN 4
+
+CodecRing:
+    BYTE    1    // NumTrks
+    BYTE    0    // NumBlks
+    BYTE    loop_sfx_pri_CodecRing    // Priority
+    BYTE    loop_sfx_rev_CodecRing    // Reverb.
+
+    POIN2    loop_sfx_grp_CodecRing
+
+    POIN2    loop_sfx_1
+
+    
+CodecRing_map:
+WORD $3c00
+POIN CodecRing_wav
+WORD $FF00FF
+
+CodecRing_wav:
+#incbin "CodecRing.bin"

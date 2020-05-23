@@ -1,0 +1,50 @@
+
+    #include "MPlayDef.event"
+
+    #define    loop_sfx_grp_CodecDial  CodecDial_map
+    #define    loop_sfx_pri_CodecDial  0
+    #define    loop_sfx_rev_CodecDial  0
+    #define    loop_sfx_mvl_CodecDial  127
+    #define    loop_sfx_key_CodecDial  0
+    #define    loop_sfx_tbs_CodecDial  1
+    #define    loop_sfx_exg_CodecDial  0
+    #define    loop_sfx_cmp_CodecDial  1
+
+    ALIGN 4
+
+loop_sfx_1:
+    BYTE        VOL     127*loop_sfx_mvl_CodecDial/mxv
+    BYTE    KEYSH   loop_sfx_key_CodecDial+0
+    BYTE        VOICE   0
+    BYTE        TIE     Cn3   v064
+    BYTE    W96
+loop_sfx_1_B1:
+    BYTE    W96
+    BYTE    W96
+    BYTE    GoTo
+     POIN2    loop_sfx_1_B1
+loop_sfx_1_B2:
+    BYTE    W06
+    BYTE        EOT     Cn3 
+    BYTE    FINE
+
+    ALIGN 4
+
+CodecDial:
+    BYTE    1    // NumTrks
+    BYTE    0    // NumBlks
+    BYTE    loop_sfx_pri_CodecDial    // Priority
+    BYTE    loop_sfx_rev_CodecDial    // Reverb.
+
+    POIN2    loop_sfx_grp_CodecDial
+
+    POIN2    loop_sfx_1
+
+    
+CodecDial_map:
+WORD $3c00
+POIN CodecDial_wav
+WORD $FF00FF
+
+CodecDial_wav:
+#incbin "CodecDial.bin"
