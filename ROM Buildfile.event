@@ -3,6 +3,10 @@
     #include "Custom Definitions.event"
 
 	#inctext DateTimeSetter
+	PUSH
+	ORG $D74EC
+	String("FESolid")
+	POP
 	
     ORG FreeSpace
 
