@@ -114,3 +114,35 @@ EndConvo
 NoFade
 ENDA
 
+
+//since this is where we're doing main menu stuff, let's repoint the options menu here too
+
+PUSH
+ORG $B16F8
+POIN OptionsMenuList
+ORG $B1770
+POIN OptionsMenuList
+ORG $B17DC
+POIN OptionsMenuList
+ORG $B1848
+POIN OptionsMenuList
+ORG $B1910
+POIN OptionsMenuList
+ORG $B19F0
+POIN OptionsMenuList
+ORG $B1CD8
+POIN OptionsMenuList
+ORG $B1D68
+POIN OptionsMenuList
+ORG $B22E0
+POIN OptionsMenuList
+ORG $B2408
+POIN OptionsMenuList
+POP
+
+
+ALIGN 4
+OptionsMenuList:
+BYTE 5 4 1 2 10 14 11 3 12 6 7 8 15 0
+
+
