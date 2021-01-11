@@ -50,8 +50,10 @@ NewSuspendEvent:
 EVBIT_MODIFY 0x4
 
 //load a bg, randomly play one of 5 texts
+SOUN CodecDialID
+STAL 40
 SetBackground($33)
-
+SOUN CodecOpenID
 RANDOMNUMBER 4
 BNE 1 s0 sC
 TEXTSTART
@@ -100,7 +102,10 @@ LABEL 69
 TEXTSHOW2 SuspendTextEnd2
 TEXTEND
 REMA
+SOUN CodecCloseID
 EndConvo
+
+
 
 LABEL 0x0
 EVBIT_T 0x7
@@ -108,8 +113,12 @@ ENDA
 
 
 CampbellEvent:
+SOUN CodecDialID
+STAL 40
 SetBackground($32)
+SOUN CodecOpenID
 Text(ScreenPositionTest)
+SOUN CodecCloseID
 EndConvo
 NoFade
 ENDA

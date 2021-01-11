@@ -11,3 +11,5 @@ SongTable(OutsideID,outside,MapMusicGroup)
 SongTable(0x3E,gameover,MapMusicGroup)
 #include "Songs/gameover.event"
 
+SongTable(0x43,mgs2title,MapMusicGroup)
+#include "Songs/mgs2title.event"

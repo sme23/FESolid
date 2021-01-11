@@ -1,2 +1,3 @@
 #include "Music/_MasterMusicInstaller.event"
 #include "SFX/_MasterSFXInstaller.event"
+#include "SoundRoomInstaller.event"

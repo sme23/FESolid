@@ -213,6 +213,18 @@ Time to use my CQC...[A]
 If he hasn't spotted you, you[N]
 can take him out in a single hit.[A][X]
 
+## SongName_MGS2Title
+Main Theme (MGS2)[X]
+
+## SongName_Encounter
+Encounter[X]
+
+## SongName_ThemeOfTara
+Theme of Tara[X]
+
+## SongName_Outside
+Outside[X]
+
 
 
 #include "skilldesc_text.txt"
