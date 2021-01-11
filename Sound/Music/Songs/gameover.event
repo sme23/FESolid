@@ -1,0 +1,323 @@
+//Event file generated from Sappy .s format.
+	#include "MPlayDef.event"
+
+	#define	gameover_grp  voicegroup000
+	#define	gameover_pri  0
+	#define	gameover_rev  0
+	#define	gameover_mvl  75
+	#define	gameover_key  0
+	#define	gameover_tbs  1
+	#define	gameover_exg  0
+	#define	gameover_cmp  1
+
+	// .rodata
+	//	gameover
+	ALIGN 4
+
+//**************** Track 1 (Midi-Chn.1) ****************//
+
+gameover_1:
+	BYTE		VOL     127*gameover_mvl/mxv
+	BYTE	KEYSH   gameover_key+0
+// 000   ----------------------------------------
+	BYTE	TEMPO   140*gameover_tbs/2
+	BYTE		VOICE   48
+	BYTE		PAN     c_v+24
+	BYTE		N60     Dn0   v127
+	BYTE		N09     Dn1 
+	BYTE		N09     Gn1 
+	BYTE		N09     Dn2 
+	BYTE		N09     Dn3 
+	BYTE	W18
+	BYTE		        Dn1 
+	BYTE		N09     Gn1 
+	BYTE		N09     Dn2 
+	BYTE		N09     Dn3 
+	BYTE	W18
+	BYTE		N12     Ds1 
+	BYTE		N03     Gs1 
+	BYTE		N12     Ds2 
+	BYTE		N12     Ds3 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N12     Gn1 
+	BYTE		N12     Dn2 
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		N36     Cn0 
+	BYTE		N12     Cn1 
+	BYTE		N12     Fn1 
+	BYTE		N06     Cn2 
+	BYTE		N06     Cn3 
+	BYTE	W36
+// 001   ----------------------------------------
+	BYTE		N36     Fn0 
+	BYTE		N09     Fn1 
+	BYTE		N09     Fn2 
+	BYTE		N09     Fn3 
+	BYTE		N09     As3 
+	BYTE		N09     Fn4 
+	BYTE		N18     As4 
+	BYTE	W18
+	BYTE		N09     Fn1 
+	BYTE		N09     Fn2 
+	BYTE		N09     Fn3 
+	BYTE		N09     As3 
+	BYTE		N09     Fn4 
+	BYTE		N18     As4 
+	BYTE	W18
+	BYTE		N12     Gn0 
+	BYTE		N12     Gn1 
+	BYTE		N06     Gn2 
+	BYTE		N09     Gn3 
+	BYTE		N06     Cn4 
+	BYTE		N09     Gn4 
+	BYTE		N18     Cn5 
+	BYTE	W30
+	BYTE	FINE
+
+//**************** Track 2 (Midi-Chn.2) ****************//
+
+gameover_2:
+	BYTE		VOL     127*gameover_mvl/mxv
+	BYTE	KEYSH   gameover_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   55
+	BYTE	W96
+// 001   ----------------------------------------
+	BYTE		N36     Fn0   v127
+	BYTE		N09     Fn1 
+	BYTE		N09     Fn2 
+	BYTE		N09     Fn3 
+	BYTE		N09     As3 
+	BYTE		N09     Fn4 
+	BYTE		N18     As4 
+	BYTE	W18
+	BYTE		N09     Fn1 
+	BYTE		N09     Fn2 
+	BYTE		N09     Fn3 
+	BYTE		N09     As3 
+	BYTE		N09     Fn4 
+	BYTE		N18     As4 
+	BYTE	W18
+	BYTE		N12     Gn0 
+	BYTE		N12     Gn1 
+	BYTE		N06     Gn2 
+	BYTE		N09     Gn3 
+	BYTE		N06     Cn4 
+	BYTE		N09     Gn4 
+	BYTE		N18     Cn5 
+	BYTE	W30
+	BYTE	FINE
+
+//**************** Track 3 (Midi-Chn.3) ****************//
+
+gameover_3:
+	BYTE		VOL     127*gameover_mvl/mxv
+	BYTE	KEYSH   gameover_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   47
+	BYTE	W72
+	BYTE		N06     Fn1   v127
+	BYTE		N06     Fn2 
+	BYTE		N06     Fn3 
+	BYTE	W06
+	BYTE		N12     Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+// 001   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+	BYTE		        Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+	BYTE		        Gn1 
+	BYTE		N12     Gn2 
+	BYTE		N12     Gn3 
+	BYTE	W30
+	BYTE	FINE
+
+//**************** Track 4 (Midi-Chn.4) ****************//
+
+gameover_4:
+	BYTE		VOL     127*gameover_mvl/mxv
+	BYTE	KEYSH   gameover_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   127
+	BYTE	W72
+	BYTE		N06     Fn1   v127
+	BYTE		N06     Fn2 
+	BYTE		N06     Fn3 
+	BYTE	W06
+	BYTE		N12     Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+// 001   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+	BYTE		        Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+	BYTE		        Gn1 
+	BYTE		N12     Gn2 
+	BYTE		N12     Gn3 
+	BYTE	W30
+	BYTE	FINE
+
+//**************** Track 5 (Midi-Chn.5) ****************//
+
+gameover_5:
+	BYTE		VOL     127*gameover_mvl/mxv
+	BYTE	KEYSH   gameover_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   116
+	BYTE	W72
+	BYTE		N06     Fn1   v127
+	BYTE		N06     Fn2 
+	BYTE		N06     Fn3 
+	BYTE	W06
+	BYTE		N12     Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+// 001   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+	BYTE		        Fn1 
+	BYTE		N12     Fn2 
+	BYTE		N12     Fn3 
+	BYTE	W18
+	BYTE		        Gn1 
+	BYTE		N12     Gn2 
+	BYTE		N12     Gn3 
+	BYTE	W30
+	BYTE	FINE
+
+//**************** Track 6 (Midi-Chn.6) ****************//
+
+gameover_6:
+	BYTE	KEYSH   gameover_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   48
+	BYTE		PAN     c_v-27
+	BYTE		VOL     48*gameover_mvl/mxv
+	BYTE	W12
+	BYTE		N60     Dn0   v127
+	BYTE		N09     Dn1 
+	BYTE		N09     Gn1 
+	BYTE		N09     Dn2 
+	BYTE		N09     Dn3 
+	BYTE	W18
+	BYTE		        Dn1 
+	BYTE		N09     Gn1 
+	BYTE		N09     Dn2 
+	BYTE		N09     Dn3 
+	BYTE	W18
+	BYTE		N12     Ds1 
+	BYTE		N03     Gs1 
+	BYTE		N12     Ds2 
+	BYTE		N12     Ds3 
+	BYTE	W12
+	BYTE		        Dn1 
+	BYTE		N12     Gn1 
+	BYTE		N12     Dn2 
+	BYTE		N12     Dn3 
+	BYTE	W12
+	BYTE		N36     Cn0 
+	BYTE		N12     Cn1 
+	BYTE		N12     Fn1 
+	BYTE		N06     Cn2 
+	BYTE		N06     Cn3 
+	BYTE	W24
+// 001   ----------------------------------------
+	BYTE	W12
+	BYTE		N36     Fn0 
+	BYTE		N09     Fn1 
+	BYTE		N09     Fn2 
+	BYTE		N09     Fn3 
+	BYTE		N09     As3 
+	BYTE		N09     Fn4 
+	BYTE		N18     As4 
+	BYTE	W18
+	BYTE		N09     Fn1 
+	BYTE		N09     Fn2 
+	BYTE		N09     Fn3 
+	BYTE		N09     As3 
+	BYTE		N09     Fn4 
+	BYTE		N18     As4 
+	BYTE	W18
+	BYTE		N12     Gn0 
+	BYTE		N12     Gn1 
+	BYTE		N06     Gn2 
+	BYTE		N09     Gn3 
+	BYTE		N06     Cn4 
+	BYTE		N09     Gn4 
+	BYTE		N18     Cn5 
+	BYTE	W18
+	BYTE	FINE
+
+//**************** Track 7 (Midi-Chn.7) ****************//
+
+gameover_7:
+	BYTE		VOL     127*gameover_mvl/mxv
+	BYTE	KEYSH   gameover_key+0
+// 000   ----------------------------------------
+	BYTE		VOICE   123
+	BYTE	W72
+	BYTE		N06     Bn1   v127
+	BYTE		N06     Cs2 
+	BYTE	W06
+	BYTE		        Fn1 
+	BYTE		N06     Cs2 
+	BYTE	W18
+// 001   ----------------------------------------
+	BYTE		        Fn1 
+	BYTE		N06     Bn1 
+	BYTE		N06     Cs2 
+	BYTE		N06     En2 
+	BYTE		N06     An2 
+	BYTE	W18
+	BYTE		        Fn1 
+	BYTE		N06     Bn1 
+	BYTE		N06     Cs2 
+	BYTE		N06     En2 
+	BYTE		N06     An2 
+	BYTE	W18
+	BYTE		        Fn1 
+	BYTE		N06     Bn1 
+	BYTE		N06     Cs2 
+	BYTE		N06     En2 
+	BYTE		N06     An2 
+	BYTE	W30
+	BYTE	FINE
+
+//******************************************************//
+	ALIGN 4
+
+gameover:
+	BYTE	7	// NumTrks
+	BYTE	0	// NumBlks
+	BYTE	gameover_pri	// Priority
+	BYTE	gameover_rev	// Reverb.
+
+	POIN2	gameover_grp
+
+	POIN2	gameover_1
+	POIN2	gameover_2
+	POIN2	gameover_3
+	POIN2	gameover_4
+	POIN2	gameover_5
+	POIN2	gameover_6
+	POIN2	gameover_7
+
+	

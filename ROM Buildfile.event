@@ -21,6 +21,10 @@
 	#include "Graphics/_MasterGraphicsInstaller.event"
 	MESSAGE Used graphics space ends at currentOffset
 
+	//Sound
+	#include "Sound/_MasterSoundInstaller.event"
+	MESSAGE Used sound space ends at currentOffset
+
     //Engine Hacks
     #include "Engine Hacks/_MasterHackInstaller.event"
     MESSAGE Used hax space ends at currentOffset
@@ -28,18 +32,13 @@
     //Maps
     #include "Maps/Master Map Installer.event"
 	MESSAGE Used map space ends at currentOffset
-	
-	//Sound
-	#include "Sound/_MasterSoundInstaller.event"
-	MESSAGE Used sound space ends at currentOffset
-	
+		
 	//Events
 	#include "Events/_MasterEventsInstaller.event"
 	#include "Tables/External Tables.event"
 	MESSAGE Used event space ends at currentOffset
 	
     MESSAGE Used free space ends at currentOffset
-	
 	
 #else
     ERROR You are not assembling FE8 events!

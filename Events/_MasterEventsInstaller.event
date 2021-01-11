@@ -1,4 +1,6 @@
 #include "REDAHelpers.event"
+#include "KillOpening.event"
+
 
 {
 #include "ChapterEvents.event"

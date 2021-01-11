@@ -7,3 +7,7 @@ SongTable(EncounterID,encounter,MapMusicGroup)
 
 SongTable(OutsideID,outside,MapMusicGroup)
 #include "Songs/outside.event"
+
+SongTable(0x3E,gameover,MapMusicGroup)
+#include "Songs/gameover.event"
+
