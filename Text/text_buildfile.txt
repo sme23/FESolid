@@ -9,7 +9,10 @@ HP Bars[.][X]
 Set health bar display[X]
 
 # 0x160 PrologueChName
-Boss Rush[X]
+Inner Haven (Ext.)[X]
+
+# 0x1F0 ShadeTerrainName
+Shade[X]
 
 #0x3A LearnedSkillText
 #first text ID in the free block
