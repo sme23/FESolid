@@ -13,6 +13,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(0,MoveEnemyUnit,2)
 END_MAIN
 
 CharacterBasedEvents:
@@ -118,7 +119,7 @@ ENDA
 
 StartTutorial:
 SOUN CodecRingID
-STAL 20
+STAL 40
 SetBackground($32)
 SOUN CodecOpenID
 Text(EnemyWarningTutorialText)
@@ -126,4 +127,21 @@ SOUN CodecCloseID
 EndConvo
 NoFade
 ENDA
+
+
+MoveEnemyUnit:
+MOVE 0 0x7F [5,12] 
+STAL 20
+SOUN CodecRingID
+STAL 40
+SetBackground($32)
+SOUN CodecOpenID
+Text(AttackingEnemyTutorialText)
+SOUN CodecCloseID
+EndConvo
+NoFade
+ENDA
+
+
+
 
