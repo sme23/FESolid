@@ -200,6 +200,7 @@ POP
   //Codec
   #include "SolidHacks/Codec/Codec.event"
   
+  #include "SolidHacks/Shadows/Shadows.event"
 
   ALIGN 4
   #include "SkillSystem/SkillSystemInstaller.event"

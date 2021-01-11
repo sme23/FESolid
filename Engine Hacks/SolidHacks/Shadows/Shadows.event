@@ -4,10 +4,11 @@
 
 #include "Shadows.lyn.event"
 
-#define AlertStateCalm
-#define AlertStateSearching
-#define AlertStateHostile
+#define AlertStateCalm 0
+#define AlertStateSuspicious 1
+#define AlertStateSearching 2
+#define AlertStateHostile 3
 
-#define SetAlertState(alertState) "SVAL 1 alertState; ASMC SetAlertStateASMC"
+#define SetAlertState(alertState) "SVAL s1 alertState; ASMC SetAlertStateASMC"
 #define GetAlertState "ASMC GetAlertStateASMC"
 

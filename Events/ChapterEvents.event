@@ -19,6 +19,10 @@ CharacterBasedEvents:
 END_MAIN
 
 LocationBasedEvents:
+Seize(0,EnterBuilding,21,3)
+Seize(0,EnterBuilding,21,4)
+Seize(0,EnterBuilding,21,5)
+Seize(0,EnterBuilding,21,6)
 END_MAIN
 
 MiscBasedEvents:
@@ -62,6 +66,8 @@ CAM1 [0,13]
 LOAD1 0 Units1
 ENUN
 
+SetAlertState(AlertStateCalm)
+
 /*
 ASMC PsychoMantisASMC
 BEQ 2 s0 sC
@@ -91,6 +97,9 @@ LABEL 4
 
 NoFade
 ENDA
+
+EnterBuilding:
+//this will MNC3 to inside
 
 EndingScene:
 
