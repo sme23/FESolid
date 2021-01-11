@@ -1,0 +1,105 @@
+EventPointerTable(10, PointerList)
+
+PointerList:
+POIN TurnBasedEvents
+POIN CharacterBasedEvents
+POIN LocationBasedEvents
+POIN MiscBasedEvents
+POIN Dunno1 Dunno2 Dunno3 Tutorial
+POIN Traps1 Traps2
+POIN Units1 Units1  
+POIN $0 $0 $0
+POIN $0 $0 $0
+POIN BeginningScene EndingScene
+
+TurnBasedEvents:
+END_MAIN
+
+CharacterBasedEvents:
+END_MAIN
+
+LocationBasedEvents:
+END_MAIN
+
+MiscBasedEvents:
+CauseGameOverIfLordDies
+END_MAIN
+
+Dunno1:
+END_MAIN
+
+Dunno2:
+END_MAIN
+
+Dunno3:
+END_MAIN
+
+Tutorial:
+END_MAIN
+
+Units1:
+UNIT Snake Thief 0 Level(5,Ally,0) [0,9] 0 0 1 REDA1R12 [SlimSword] NoAI
+UNIT
+
+
+EnemyUnits:
+UNIT
+
+Traps1:
+ENDTRAP
+ALIGN 4
+
+Traps2:
+ENDTRAP
+ALIGN 4
+
+BeginningScene:
+LOAD1 0 Units1
+ENUN
+
+SetAlertState(AlertStateCalm)
+
+/*
+ASMC PsychoMantisASMC
+BEQ 2 s0 sC
+SVAL s1 1
+BEQ 0 s1 sC
+SVAL s1 2
+BEQ 1 s1 sC
+SVAL s1 3
+BEQ 2 s1 sC
+GOTO 3
+
+LABEL 0 
+Text(UsingmGBAText)
+GOTO 4
+LABEL 1
+Text(UsingNoCashText)
+GOTO 4
+LABEL 2
+Text(UsingVBAText)
+GOTO 4
+LABEL 3
+Text(UsingRealHardware)
+
+LABEL 4
+
+*/
+
+NoFade
+ENDA
+
+
+EndingScene:
+
+ASMC 0x85C71 0x381F5 0x37CF9 //show records screen
+STAL 120
+EVBIT_F 0x2
+MNTS 0x1 //return to title screen
+NoFade
+ENDA
+
+
+
+
+
