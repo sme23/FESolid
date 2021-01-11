@@ -194,6 +194,17 @@ You're using NO$GBA, huh?[A][X]
 [OpenMidLeft]
 You're using a real GBA, huh?[A][X]
 
+## EnemyWarningTutorialText
+[OpenMidLeft]
+Snake, there's an enemy over there.[A][N]
+If you enter his range, he'll spot you.[A][N]
+Make sure to stick to the[N]
+[ToggleRed]Shade[ToggleRed] and you should be fine.[A][N]
+If he doesn't see you approach,[N]
+you can take him out in one shot.[A][N]
+Be careful not to put[N]
+yourself in enemy range![A][X]
+
 
 
 #include "skilldesc_text.txt"

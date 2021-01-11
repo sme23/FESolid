@@ -1,0 +1,4 @@
+setMugEntry(SnakeMug,SolidSnekPortrait,0,0,0,0)
+ALIGN 4
+SolidSnekPortrait:
+#incext PortraitFormatter "solidsnek.png"

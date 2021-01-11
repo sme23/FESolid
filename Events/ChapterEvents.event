@@ -13,6 +13,7 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
+TurnEventPlayer(7,StartTutorial,1)
 END_MAIN
 
 CharacterBasedEvents:
@@ -59,8 +60,12 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+SOUN CodecRingID
+STAL 20
 SetBackground($32)
+SOUN CodecOpenID
 Text(ScreenPositionTest)
+SOUN CodecCloseID
 EndConvo
 CAM1 [0,13]
 LOAD1 0 Units1
@@ -109,3 +114,16 @@ EVBIT_F 0x2
 MNTS 0x1 //return to title screen
 NoFade
 ENDA
+
+
+StartTutorial:
+SOUN CodecRingID
+STAL 20
+SetBackground($32)
+SOUN CodecOpenID
+Text(EnemyWarningTutorialText)
+SOUN CodecCloseID
+EndConvo
+NoFade
+ENDA
+
