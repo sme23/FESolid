@@ -27,3 +27,9 @@ BG2_tsa:
 ALIGN 4
 BG2_pal:
 #incbin "BG2_pal.dmp"
+
+ALIGN 4
+ShadeCastleTileConfig:
+#incext compress "FE8_26.mapchip_config"
+
+EventPointerTable(0x1A,ShadeCastleTileConfig)

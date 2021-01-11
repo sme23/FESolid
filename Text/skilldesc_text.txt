@@ -49,8 +49,8 @@ Cunning: Can steal items, pick[N]
 locks, and see in darkness.[X]
 
 ## SD_Lethality
-Lethality: Instantly kill opponent.[N]
-(Skill/2 % activation)[X]
+Stealthy: Instantly kill opponent[N]
+when enemies are calm.[X]
 
 ## SD_Bane
 Bane: Leave the opponent at 1 HP.[N]

@@ -38,7 +38,8 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Snake Thief 0 Level(5,Ally,0) [0,12] 0 0 1 REDA1R12 NoItems NoAI
+UNIT Snake Thief 0 Level(5,Ally,0) [0,12] 0 0 1 REDA1R12 [SlimSword] NoAI
+UNIT 0x7F Soldier 0 Level(10,Enemy,1) [10,11] 0 0 0 1 [SteelLance] AttackInRangeAI
 UNIT
 
 

@@ -23,48 +23,22 @@ bne End
 
 @if another skill already activated, don't do anything
 
-@check if crit is to be ignored
-mov	r1, #0x6C
-ldrb	r1,[r4,r1]
-mov	r5,#0xFF
-cmp	r1,#0x7F	@I set the value to FF in the battle calculations if crit is to be ignored (skill% based activation)
-bhi	RollRN
-cmp	r1,#0x7F	@check if Bane triggered
-beq	End
-cmp	r1,#0x00	@check if 0 chance
-beq	End
 
-@only activate if crit
-mov r5, #0x64
-mov r1, #0x1
-tst r0, r1
+@check for Lethality proc 
+ldr r0, SkillTester
+mov lr, r0
+mov r0, r4 @attacker data
+ldr r1, LethalityID
+.short 0xf800
+cmp r0, #0
 beq End
+@if user has lethality:
 
-RollRN:
-ldr	r0,=#0x80191D0	@call skill getter
-mov	r14,r0
-mov	r0,r4
-.short	0xF800
-mov	r1,#0x6C
-ldrb	r1,[r4,r1]
-sub	r5,r1		@FF or 64 - Lethality Chance = modifier (depending on if crit needed or not)
-lsr	r0,r5		@divide skill by modifier to get our chance (modifier was set in NonGBALethalitySkill)
-
-mov r1, r4 @skill user
-blh d100Result
-cmp r0, #1		@check if roll was successful
+@check alert state
+ldr r0,=#0x203F310
+ldrb r0,[r0]
+cmp r0,#0
 bne End
-
-
-@ @check for Lethality proc - this check may be done elsewhere...
-@ ldr r0, SkillTester
-@ mov lr, r0
-@ mov r0, r4 @attacker data
-@ ldr r1, LethalityID
-@ .short 0xf800
-@ cmp r0, #0
-@ beq End
-@ @if user has lethality:
 
 @ mov r0, r4	@commented this out because it now checks for lethality ability to determine immunity (no demon king/necromancer immunity if they don't have lethality)
 @ mov r1, r5
@@ -94,6 +68,11 @@ lsr     r1,r1,#0xD                @ 0802B4D2 0B49
 mov     r0,#0x80                @ 0802B4D4 2080     
 lsl     r0,r0,#0x4  @ 0x800, lethality flag     @ 0802B4D6 0100     
 orr     r1,r0                @ 0802B4D8 4301     
+mov		r0,#0x1			@crit
+orr		r1,r0
+mov		r0,#0x2
+neg		r0,r0
+and		r1,r0
 ldr     r2,=#0xFFF80000                @ 0802B4DA 4A0A     
 mov     r0,r2                @ 0802B4DC 1C10     
 and     r0,r3                @ 0802B4DE 4018     

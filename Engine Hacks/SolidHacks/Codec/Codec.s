@@ -27,6 +27,10 @@ push {r14}
 
 @StartMenuAdjusted takes menu definition offset in r0
 
+mov r1,#0
+mov r2,#0
+mov r3,#0
+
 ldr r0,=StartMenuAdjusted
 mov r14,r0
 ldr r0,=CodecMenuDef

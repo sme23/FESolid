@@ -9,7 +9,7 @@ HP Bars[.][X]
 Set health bar display[X]
 
 # 0x160 PrologueChName
-Inner Haven (Ext.)[X]
+Inner Haven Ext.[X]
 
 # 0x1F0 ShadeTerrainName
 Shade[X]
