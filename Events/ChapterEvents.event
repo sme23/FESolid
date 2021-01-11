@@ -13,7 +13,6 @@ POIN $0 $0 $0
 POIN BeginningScene EndingScene
 
 TurnBasedEvents:
-TurnEventPlayer(7,StartTutorial,1)
 END_MAIN
 
 CharacterBasedEvents:
@@ -31,6 +30,7 @@ CauseGameOverIfLordDies
 END_MAIN
 
 Dunno1:
+AFEV 7 StartTutorial 0
 END_MAIN
 
 Dunno2:
