@@ -6,3 +6,17 @@ SetChapterData(1,0x18,0,0x57,0x1A,8,Map,0,0,9)
 EventPointerTable(9, MapChanges)
 Map:
 #incbin "inside1_data.dmp"
+
+MapChanges:
+TileMap(0,24,2,1,1,Tile_Layer_2)
+TileMap(1,16,12,2,4,Tile_Layer_3)
+TileMapEnd
+
+Tile_Layer_2:
+SHORT 0x4 
+ALIGN 4
+
+Tile_Layer_3:
+SHORT 0x7a8 0x0 0xb48 0xb44 0x728 0x0 0x728 0x0 
+ALIGN 4
+

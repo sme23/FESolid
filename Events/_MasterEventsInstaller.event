@@ -5,3 +5,7 @@
 {
 #include "ChapterEvents.event"
 }
+{
+#include "InnerHaven.event"
+}
+
