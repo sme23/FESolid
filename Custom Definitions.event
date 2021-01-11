@@ -26,6 +26,8 @@
 #define LunarBrace MoonBracelet
 #define SolarBrace SunBracelet
 
+#define SkillScroll BlackGem+1
+
 // Attribute for defining items with passive stat bonuses
 #define PASSIVE_ITEM_BOOSTS_ATTR 0x00800000
 

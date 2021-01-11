@@ -175,6 +175,23 @@ save your mission.[X]
 Call someone[N]
 using your codec.[X]
 
+## UsingmGBAText
+[OpenMidLeft]
+You're using mGBA, huh?[A][X]
+
+## UsingVBAText
+[OpenMidLeft]
+You're using VBA, huh?[A][X]
+
+## UsingNoCashText
+[OpenMidLeft]
+You're using NO$GBA, huh?[A][X]
+
+## UsingRealHardware
+[OpenMidLeft]
+You're using a real GBA, huh?[A][X]
+
+
 
 #include "skilldesc_text.txt"
 

@@ -4,8 +4,10 @@
 
 #include "Shadows.lyn.event"
 
-#define DisableShadowsFlag 0xB1
+#define AlertStateCalm
+#define AlertStateSearching
+#define AlertStateHostile
 
-#define CheckIfShaded(charID) "SVAL 1 charID; ASMC CheckShadowBitASMC"
-#define ToggleShaded(charID) "SVAL 1 charID; ASMC ToggleShadowBitASMC"
+#define SetAlertState(alertState) "SVAL 1 alertState; ASMC SetAlertStateASMC"
+#define GetAlertState "ASMC GetAlertStateASMC"
 

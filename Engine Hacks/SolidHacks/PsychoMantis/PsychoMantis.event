@@ -1,0 +1,5 @@
+//ASMC that checks for irregularities to determine what emulator you're using
+// currently supports VBA and mGBA (surprisingly)
+
+#include "PsychoMantis.lyn.event"
+

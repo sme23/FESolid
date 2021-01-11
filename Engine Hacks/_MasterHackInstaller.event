@@ -126,6 +126,9 @@ POP
   
   //Debuffs
   #include "Necessary/SuspendDebuffs/Debuffs.event"
+  
+  //PsychoMantis
+  #include "SolidHacks/PsychoMantis/PsychoMantis.event"
 
   //Stat Screens palette by allegiance
   #include "ExternalHacks/StatScreenAllegiance/StatScreenAllegiance.event"

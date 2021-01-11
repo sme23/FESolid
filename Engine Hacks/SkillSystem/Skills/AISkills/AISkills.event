@@ -43,3 +43,6 @@ ShadePlus:
 #incbin "ShadePlus/ShadePlus.dmp"
 POIN SkillTester
 WORD ShadePlusID
+WORD 0x2C //Shade terrain ID
+WORD 0x203F310 //location of alert status in memory
+

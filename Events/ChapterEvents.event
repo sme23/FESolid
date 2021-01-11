@@ -60,6 +60,34 @@ EndConvo
 CAM1 [0,13]
 LOAD1 0 Units1
 ENUN
+
+/*
+ASMC PsychoMantisASMC
+BEQ 2 s0 sC
+SVAL s1 1
+BEQ 0 s1 sC
+SVAL s1 2
+BEQ 1 s1 sC
+SVAL s1 3
+BEQ 2 s1 sC
+GOTO 3
+
+LABEL 0 
+Text(UsingmGBAText)
+GOTO 4
+LABEL 1
+Text(UsingNoCashText)
+GOTO 4
+LABEL 2
+Text(UsingVBAText)
+GOTO 4
+LABEL 3
+Text(UsingRealHardware)
+
+LABEL 4
+
+*/
+
 NoFade
 ENDA
 
