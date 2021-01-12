@@ -1,0 +1,39 @@
+trying to understand these checks...
+
+address = 0x4000008
+storeFirst = true
+restoreAfter = true
+expected = 0xDFFF
+restore = 0
+
+
+vu16* address = 0x4000008;
+original = *address;
+*address = 0xFFFF;
+
+@if this doesnt work check the test rom around 8001A90
+ldr r1,=#0x4000008
+ldr r0,=#0xFFFFFFFF
+strh r0,[r1]
+ldrh r0,[r1]
+@if r0=DFFF, we're on real hardware or a good emulator
+@if r0=DFCF, we're on VBA
+@if r0=FFFF, we're on VGBA
+
+ldr r1,=#0x4000062
+ldr r0,=#0xFFFFFFFF
+strh r0,[r1]
+ldrh r0,[r1]
+@if r0=FFC0, we're on real hardware or a good emulator
+@if r0=47FF, we're on mGBA
+
+@two more tests that work differently for checking no$ and higan
+@hmm how do these work
+@both should be ROM -> IWRAM DMA transfers
+@channel 0?
+@anyhow we're checking the result of a DMA transfer? i think
+
+
+@new plan: higan sucks so don't even check for it
+@do the existing check that VBA & no$ fail, assume no$ if failed after the above (assuming the above works)
+
