@@ -53,7 +53,7 @@ beq GoBack
 @first we do a dma transfer from valid memory to valid memory
 ldr	r4,=#0x40000C8
 ldr	r0,=#0x8000000
-ldr	r1,=#0x203FFF0
+ldr	r1,=#0x2000000
 mov	r2,#8
 str	r0,[r4]
 str	r1,[r4,#4]
@@ -65,7 +65,7 @@ ldr	r0,=#0x0000000
 str	r0,[r4]
 strh	r5,[r4,#10]
 @and now we check if the result was 0, if so we are dealing with a bad emulator
-ldr	r0,=#0x203FFF0
+ldr	r0,=#0x2000000
 ldr	r1,[r0]
 cmp	r1,#0
 bne	CheckVBA
