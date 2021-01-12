@@ -21,10 +21,16 @@ END_MAIN
 
 LocationBasedEvents:
 Chest(DoorKey,24,2)
+Door(16,13)
+Seize(11,GoBackOutside,0,8)
+Seize(11,GoBackOutside,0,9)
+Seize(11,GoBackOutside,0,10)
+Seize(11,GoBackOutside,0,11)
 END_MAIN
 
 MiscBasedEvents:
 CauseGameOverIfLordDies
+//AREA 9 OtaconAlmostExitedEvent [1,1] [9,19]
 END_MAIN
 
 Dunno1:
@@ -69,6 +75,8 @@ ALIGN 4
 BeginningScene:
 LOAD1 0 Units1
 ENUN
+ENUT 0xB1
+
 
 SetAlertState(AlertStateCalm)
 
@@ -117,7 +125,34 @@ OtaconTalkEvent:
 Text(SnakeOtaconTalkText)
 SVAL s1 0x00000A00 //move towards snake AI
 CHAI Otacon
+SetAlertState(AlertStateCalm)
+ENUF 4
+ENUT 0xB0
 NoFade
 ENDA
 
+OtaconAlmostExitedEvent:
+//check for otacon in area
+CHECK_INAREA Otacon [1,1] [9,14]
+BEQ 33 s0 sC
+
+MOVE 0 Otacon [0,10]
+ENUN
+DISA Otacon
+ENUT 0xB0
+ENUF 11
+
+LABEL 33
+NoFade
+ENDA
+
+
+GoBackOutside:
+FADI 10
+CLEA 0
+CLEN 0
+CLEE 0
+MNC3 0
+NoFade
+ENDA
 

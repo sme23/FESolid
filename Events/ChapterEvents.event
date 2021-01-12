@@ -48,6 +48,9 @@ UNIT Snake Thief 0 Level(5,Ally,0) [0,12] 0 0 1 REDA1R12 [SlimSword,ChestKey] No
 UNIT 0x7F Soldier 0 Level(10,Enemy,1) [10,11] 0 0 0 1 [SteelLance] AttackInRangeAI
 UNIT
 
+Units2:
+UNIT Snake Thief 0 Level(5,Ally,0) [21,5] 0 0 0 1 [SlimSword,ChestKey] NoAI
+UNIT
 
 EnemyUnits:
 UNIT
@@ -61,6 +64,10 @@ ENDTRAP
 ALIGN 4
 
 BeginningScene:
+
+CHECK_EVENTID 0xB1
+BNE 12 s0 sC
+
 SOUN CodecRingID
 STAL 20
 SetBackground($32)
@@ -101,6 +108,29 @@ LABEL 4
 
 */
 
+GOTO 22
+
+LABEL 12
+
+LOAD1 0 Units2
+ENUN
+ENUT 7
+
+CHECK_EVENTID 0xB0
+BEQ 22 s0 sC
+
+SOUN CodecRingID
+STAL 20
+SetBackground($32)
+SOUN CodecOpenID
+Text(ExitingBuildingCodecText)
+SOUN CodecCloseID
+EndConvo
+
+CALL EndingScene
+
+
+LABEL 22
 NoFade
 ENDA
 

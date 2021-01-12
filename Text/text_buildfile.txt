@@ -11,6 +11,9 @@ Set health bar display[X]
 # 0x160 PrologueChName
 Inner Haven Ext.[X]
 
+## NextNameText
+Inner Haven[X]
+
 # 0x1F0 ShadeTerrainName
 Shade[X]
 
@@ -242,11 +245,19 @@ Otacon[X]
 An eccentric scientist.[X]
 
 ## SnakeOtaconTalkText
-[OpenMidLeft][LoadFace][0x2][0x1]
+[OpenMidLeft][LoadFace][0x3][0x1]
 S-Snake!? Thank goodness you're here![A][N]
 Please, get me out of here![A][N]
 I'll follow you,[N]
 so just lead me outside.[A][X]
+
+## ExitingBuildingCodecText
+[OpenMidLeft]
+Snake, you've done it![N]
+You rescued Otacon![A][N]
+There was supposed to be[N]
+a cool boss fight here,[A][N]
+but we ran out of time :)[A][X]
 
 #include "skilldesc_text.txt"
 
