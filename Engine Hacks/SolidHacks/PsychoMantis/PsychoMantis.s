@@ -77,58 +77,23 @@ str r2,[r0]
 
 CheckVBA:
 
-@ vba: pipeline length schenanigans that pretty sure only mgba & real hardware get right
-@ we're gonna move some code into ram
-@ that edits itself slightly further down
-@ and then checks a value to see if it 
-@ got prefetched or not
-@shoutouts to nintendo for this one, copied straight from the Classic NES Series games
+@if this doesnt work check the test rom around 8001A90
+ldr r1,=#0x4000008
+ldr r0,=#0xFFFFFFFF
+strh r0,[r1]
+ldrh r0,[r1]
+@if r0=DFFF, we're on real hardware or a good emulator
+@if r0=DFCF, we're on VBA
+@if r0=FFFF, we're on VGBA
 
-@memcpy into ram the function, then run it
-@we need to know how long it is
-@and to load a fixed value too
-@it's 6 words long, so start at 203FFE8
-@then longcall to there
-ldr r0,=#0x203FFE8
-ldr r1,=PipelineCheckFunction
-@lazy so copypaste 6 times
-ldr r2,[r1]
-str r2,[r0]
-add r1,#4
-add r0,#4
-ldr r2,[r1]
-str r2,[r0]
-add r1,#4
-add r0,#4
-ldr r2,[r1]
-str r2,[r0]
-add r1,#4
-add r0,#4
-ldr r2,[r1]
-str r2,[r0]
-add r1,#4
-add r0,#4
-ldr r2,[r1]
-str r2,[r0]
-add r1,#4
-add r0,#4
-ldr r2,[r1]
-str r2,[r0]
-add r1,#4
-add r0,#4
+ldr r1,=#0xDFCF
+cmp r0,r1
+bne GoBack
 
-ldr r0,=#0x203FFE8
-mov r14,r0
-.short 0xF800
-cmp r1,#0
-beq GoBack
-
-@using VBA
+UsingVBA:
 mov r2,#3
 ldr r0,=MemorySlotC
 str r2,[r0]
-
-
 
 GoBack:
 pop {r4-r7}
@@ -150,4 +115,3 @@ bx r14
 
 .ltorg
 .align
-
