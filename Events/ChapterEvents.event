@@ -81,7 +81,7 @@ ENUN
 
 SetAlertState(AlertStateCalm)
 
-/*
+
 ASMC PsychoMantisASMC
 BEQ 2 s0 sC
 SVAL s1 1
@@ -106,7 +106,7 @@ Text(UsingRealHardware)
 
 LABEL 4
 
-*/
+
 
 GOTO 22
 
