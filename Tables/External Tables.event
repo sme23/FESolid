@@ -53,6 +53,7 @@ ENDA
 EnemyAlertEvent:
 SOUN SpottedID
 SetAlertState(AlertStateHostile)
+ENUT 4
 STAL 40
 NoFade
 ENDA

@@ -50,6 +50,7 @@
 
 #define Snake Eirika
 #define SnakeMug 2
-
+#define Otacon 2
+#define OtaconMug 3
 
 

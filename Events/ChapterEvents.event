@@ -44,7 +44,7 @@ Tutorial:
 END_MAIN
 
 Units1:
-UNIT Snake Thief 0 Level(5,Ally,0) [0,12] 0 0 1 REDA1R12 [SlimSword] NoAI
+UNIT Snake Thief 0 Level(5,Ally,0) [0,12] 0 0 1 REDA1R12 [SlimSword,ChestKey] NoAI
 UNIT 0x7F Soldier 0 Level(10,Enemy,1) [10,11] 0 0 0 1 [SteelLance] AttackInRangeAI
 UNIT
 
@@ -65,7 +65,7 @@ SOUN CodecRingID
 STAL 20
 SetBackground($32)
 SOUN CodecOpenID
-Text(ScreenPositionTest)
+Text(ActualOpeningCodecCallText)
 SOUN CodecCloseID
 EndConvo
 CAM1 [0,13]
@@ -106,6 +106,13 @@ ENDA
 
 EnterBuilding:
 //this will MNC3 to inside
+FADI 10
+CLEA 0
+CLEN 0
+CLEE 0
+MNC3 1
+NoFade
+ENDA
 
 EndingScene:
 
@@ -130,7 +137,7 @@ ENDA
 
 
 MoveEnemyUnit:
-MOVE 0 0x7F [5,12] 
+MOVE 0 0x7F [5,11] 
 STAL 20
 SOUN CodecRingID
 STAL 40

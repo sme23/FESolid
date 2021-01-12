@@ -115,7 +115,7 @@ keeps alerting the guards...[....][A]
 Snake[X]
 
 ## SnakeDesc
-Snake[X]
+Dummy thicc[X]
 
 ## SuspendText1
 [OpenMidLeft]
@@ -208,10 +208,20 @@ yourself in enemy range![A][X]
 Snake, the enemy has moved[N]
 in range of your attack.[A]
 [OpenMidRight]
-Time to use my CQC...[A]
+Time to use CQC...[A]
 [OpenMidLeft]
 If he hasn't spotted you, you[N]
 can take him out in a single hit.[A][X]
+
+## ActualOpeningCodecCallText
+[OpenMidLeft]
+Snake, Otacon has been kidnapped[N]
+and is being held at Inner Haven.[A]
+[OpenMidRight]
+Inner Haven...[A]
+[OpenMidLeft]
+We're dropping you just outside.[N]
+Good luck.[A][X]
 
 ## SongName_MGS2Title
 Main Theme (MGS2)[X]
@@ -225,7 +235,18 @@ Theme of Tara[X]
 ## SongName_Outside
 Outside[X]
 
+## OtaconName
+Otacon[X]
 
+## OtaconDesc
+An eccentric scientist.[X]
+
+## SnakeOtaconTalkText
+[OpenMidLeft][LoadFace][0x2][0x1]
+S-Snake!? Thank goodness you're here![A][N]
+Please, get me out of here![A][N]
+I'll follow you,[N]
+so just lead me outside.[A][X]
 
 #include "skilldesc_text.txt"
 
